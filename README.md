@@ -16,18 +16,36 @@ It is designed to organize and share projects for various Nucleo and custom boar
 - STM32G431, STM32G474, STM32G484, and other STM32G4 series MCUs
 
 ## Project Structure
-- GPIOs ( Input-Data, Output-Data )
-- System Core ( DMA, IWDG, WWDG, RCC, SYS )
-- Analog ( ADC, COMP, OPAMP, DAC )
-- Timers ( Timer, HRTIM, LPRTIM, RTC )
-- Connectivity ( I2C, SPI, UART, UCPD, USB, LPUART, QUADSPI, FMC, FDCAN )
-- Multimedia ( I2S, SAI )
-- Security ( RNG )
-- Computing ( CORDIC, CRC, FMAC )
-- Displies ( TFT-LCD, OLED, character-LCD, 7-Segment )
-- Moudules
-- Sensors
-- Keyboard, and etc.
+| Category             | Module                       | Example Project        | Description                                             | Language |
+| -------------------- | ---------------------------- | ---------------------- | ------------------------------------------------------- | -------- |
+| **GPIOs**            | Input / Output               | `gpio_toggle`          | Basic input/output pin control, LED blink, button input | C        |
+| **System Core**      | DMA                          | `dma_transfer`         | Memory-to-peripheral data transfer example              | C        |
+|                      | IWDG / WWDG                  | `watchdog_demo`        | Independent and window watchdog timers usage            | C        |
+|                      | RCC / SYS                    | `system_clock_config`  | Configure system clock, PLL, HSE/HSI                    | C        |
+| **Analog**           | ADC                          | `adc_multi_channel`    | Multi-channel ADC with DMA                              | C        |
+|                      | DAC                          | `dac_wave_gen`         | Generate analog waveforms                               | C        |
+|                      | OPAMP                        | `opamp_buffer`         | Internal operational amplifier as voltage follower      | C        |
+|                      | COMP                         | `comparator_threshold` | Analog comparator with interrupt output                 | C        |
+| **Timers**           | Timer / PWM                  | `pwm_output`           | Generate PWM signals for motor or LED dimming           | C        |
+|                      | HRTIM                        | `hrtim_motor_control`  | High-resolution timer for motor drive                   | C        |
+|                      | LPTIM                        | `lowpower_timer`       | Low-power timer for periodic wake-up                    | C        |
+|                      | RTC                          | `real_time_clock`      | Real-time clock with alarm and backup                   | C        |
+| **Connectivity**     | I2C                          | `i2c_eeprom`           | Read/write EEPROM using I2C                             | C        |
+|                      | SPI                          | `spi_lcd`              | Communicate with display via SPI                        | C        |
+|                      | UART / LPUART                | `uart_console`         | Serial communication example                            | C        |
+|                      | USB                          | `usb_cdc`              | USB virtual COM port                                    | C        |
+|                      | FDCAN                        | `fdcan_loopback`       | CAN bus communication test                              | C        |
+|                      | QUADSPI                      | `qspi_flash`           | Read/write external flash memory                        | C        |
+| **Multimedia**       | I2S / SAI                    | `i2s_audio_codec`      | Audio streaming via I2S                                 | C        |
+| **Security**         | RNG                          | `rng_demo`             | Random number generator example                         | C        |
+| **Computing**        | CORDIC                       | `cordic_trig`          | Use CORDIC for fast trigonometric calculations          | C        |
+|                      | CRC                          | `crc_check`            | Data integrity check                                    | C        |
+|                      | FMAC                         | `fmac_filter`          | Digital filter using hardware FMAC unit                 | C        |
+| **Displays**         | TFT / OLED / LCD / 7-Segment | `oled_display`         | Show text and sensor data                               | C        |
+| **Modules**          | Wi-Fi / Bluetooth / GPS      | `wifi_mqtt`            | IoT connectivity example                                | C        |
+| **Sensors**          | Temperature / Accelerometer  | `sensor_read`          | Read data via I2C/SPI                                   | C        |
+| **Keyboard / Input** | Keypad / Touch               | `keypad_scan`          | Matrix keypad scanning and debouncing                   | C        |
+
 
 ## Library MCU
 - Bare-Metal
